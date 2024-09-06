@@ -7,7 +7,7 @@ import { Tooltip } from "./Tooltip";
 export const Navbar = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "public/Resume.pdf";
+    link.href = "/Resume.pdf";
     link.download = "resume.pdf";
     link.click();
   };
