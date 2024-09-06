@@ -19,7 +19,7 @@ const LeftContent = () => {
     <div className="w-full lg:w-1/2">
       <div className="flex flex-col items-center lg:items-start">
         <motion.h1
-          className="pb-16 text-5xl font-thin tracking-normal lg:mt-16 lg:text-8xl"
+          className="pb-16 text-4xl font-thin tracking-normal lg:mt-16 lg:text-8xl"
           {...applyMotionWithDelay(0)}
         >
           Vinayak Jadhav

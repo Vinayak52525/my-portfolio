@@ -5,11 +5,23 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { Tooltip } from "./Tooltip";
 
 export const Navbar = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "src\\assets\\Resume.pdf";
+    link.download = "resume.pdf";
+    link.click();
+  };
+
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
-      <div className="flex flex-shrink-0 items-center">
-        <img src={logo} alt="logo" className="mx-2 w-10" />
-      </div>
+      <Tooltip text={"Download Resume"}>
+        <div
+          onClick={handleDownloadResume}
+          className="flex flex-shrink-0 items-center cursor-pointer "
+        >
+          <img src={logo} alt="logo" className="mx-2 w-10 rounded-md" />
+        </div>
+      </Tooltip>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         {navItems.map(({ Icon, href, tooltipText }) => (
           <Tooltip key={href} text={tooltipText}>
